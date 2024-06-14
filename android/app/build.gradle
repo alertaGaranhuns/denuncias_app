@@ -1,8 +1,28 @@
+import java.util.Properties
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    ext {
+        kotlin_version = '1.5.31'
+        flutter_version = '3.22.1'
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.gms:google-services:4.3.10" // Esta linha está integrada ao Firebase.
+        classpath "dev.flutter:flutter-gradle-plugin:$flutter_version"
+    }
+}
+
 plugins {
     id "com.android.application"
     id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    // O plugin Flutter Gradle deve ser aplicado após os plugins Gradle Android e Kotlin.
     id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services" // Esta linha para aplicar o plugin do Google Services
 }
 
 def localProperties = new Properties()
@@ -24,38 +44,33 @@ if (flutterVersionName == null) {
 }
 
 android {
+    compileSdkVersion 31 // Defina a versão correta do SDK de compilação
+    buildToolsVersion "31.0.0" // Defina a versão correta das ferramentas de build
+
     defaultConfig {
-        minSdkVersion flutter.minSdkVersion
+        applicationId "com.example.denuncias_app"
+        minSdkVersion flutter.minSdkVersion.toInteger()
+        targetSdkVersion flutter.targetSdkVersion.toInteger()
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
     }
-    namespace = "com.example.denuncias_app"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.denuncias_app"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutterVersionCode.toInteger()
-        versionName = flutterVersionName
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.debug
+            // TODO: Configure a assinatura para a build de lançamento.
+            // Por enquanto, estamos usando as chaves de depuração para que `flutter run --release` funcione.
+            signingConfig signingConfigs.debug
         }
     }
 }
 
 flutter {
-    source = "../.."
+    source '../..'
 }
+
+apply plugin: 'com.google.gms.google-services'

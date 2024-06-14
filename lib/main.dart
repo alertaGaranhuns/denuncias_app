@@ -1,7 +1,11 @@
-import 'package:denuncias_app/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:denuncias_app/screens/home_screen.dart'; // Verifique o caminho correto para o seu arquivo home_screen.dart
 
-void main() {
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); // Inicializa o Firebase
   runApp(const MyApp());
 }
 

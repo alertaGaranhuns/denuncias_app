@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4' // Verifique se esta versão é a correta para o seu projeto
+        classpath 'com.google.gms:google-services:4.3.10' // Adicione esta linha
+        classpath "dev.flutter:flutter-gradle-plugin:3.22.1" // Atualize para a versão correta do Flutter Gradle Plugin
+
+    }
+}
 allprojects {
     repositories {
         google()
@@ -15,4 +27,4 @@ subprojects {
 
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
-}
+} 
