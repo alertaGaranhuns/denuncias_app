@@ -1,10 +1,10 @@
 # denuncias_app
 
-A new Flutter project.
+Projeto de conclusão TI 2021.1
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Programado utilizando o framework Flutter da linguagem Dart
 
 A few resources to get you started if this is your first Flutter project:
 
