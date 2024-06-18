@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163300640653",
+    "project_id": "denuncias-app-fda43",
+    "storage_bucket": "denuncias-app-fda43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163300640653:android:d456efa171d57ab31b1fc4",
+        "android_client_info": {
+          "package_name": "com.example.denuncias_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9BXBRmxDY9KWhzeEpCqVXjeZTRQDmpzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
