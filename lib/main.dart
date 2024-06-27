@@ -1,5 +1,5 @@
 import 'package:denuncias_app/login_page.dart';
-
+import 'package:denuncias_app/signup_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const LoginPage(),  // Defina a tela de login como a tela inicial
+      home: const LoginPage(),  //  tela inicial
+       routes: {
+        '/signup': (context) => const CadastroPage(),  // Define a rota para a tela de cadastro
+      },
     );
   }
 

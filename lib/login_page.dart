@@ -152,7 +152,7 @@ class LoginPage extends StatelessWidget {
                     Expanded(
                     child: Divider(
                     height: 1,
-                    color: Color(0xFFE6E6E6),
+                    color: Color(0xFF828282),
                         ),
                       ),
                   Padding(
@@ -163,14 +163,14 @@ class LoginPage extends StatelessWidget {
                       fontFamily: 'DM Sans',
                       fontSize: 14.0,
                       fontWeight: FontWeight.normal,
-                      color: Colors.black87,
+                      color: Color(0xFF828282),
                       height: 1.4,
                     ),
                   ),
                 ),
                 Expanded(child:Divider(
                       height: 1,
-                      color: Color(0xFFE6E6E6),
+                      color: Color(0xFF828282),
                         ),
                       ),
                     ],
@@ -206,12 +206,20 @@ class LoginPage extends StatelessWidget {
                                     fontFamily: 'DM Sans',
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white, // cor do texto branca
+                                    color: Colors.black, // cor do texto branca
                                     ),
                                 ),
                               ],
                           ),
                     ),
+                  ),
+                  const SizedBox(height: 15),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/signup');  // Navega para a tela de cadastro
+                    },
+                    child: const Text('Não tem conta? Cadastre-se aqui'),
+
                   ),
                 ],
               ),
