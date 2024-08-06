@@ -152,7 +152,11 @@ class LoginPage extends StatelessWidget {
                     Expanded(
                     child: Divider(
                     height: 1,
+<<<<<<< HEAD
                     color: Color(0xFFE6E6E6),
+=======
+                    color: Color(0xFF828282),
+>>>>>>> ac0eadb181070b4faf12b9ee2eefffd38ca9e105
                         ),
                       ),
                   Padding(
@@ -163,14 +167,22 @@ class LoginPage extends StatelessWidget {
                       fontFamily: 'DM Sans',
                       fontSize: 14.0,
                       fontWeight: FontWeight.normal,
+<<<<<<< HEAD
                       color: Colors.black87,
+=======
+                      color: Color(0xFF828282),
+>>>>>>> ac0eadb181070b4faf12b9ee2eefffd38ca9e105
                       height: 1.4,
                     ),
                   ),
                 ),
                 Expanded(child:Divider(
                       height: 1,
+<<<<<<< HEAD
                       color: Color(0xFFE6E6E6),
+=======
+                      color: Color(0xFF828282),
+>>>>>>> ac0eadb181070b4faf12b9ee2eefffd38ca9e105
                         ),
                       ),
                     ],
@@ -206,13 +218,28 @@ class LoginPage extends StatelessWidget {
                                     fontFamily: 'DM Sans',
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
+<<<<<<< HEAD
                                     color: Colors.white, // cor do texto branca
+=======
+                                    color: Colors.black, // cor do texto branca
+>>>>>>> ac0eadb181070b4faf12b9ee2eefffd38ca9e105
                                     ),
                                 ),
                               ],
                           ),
                     ),
                   ),
+<<<<<<< HEAD
+=======
+                  const SizedBox(height: 15),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/signup');  // Navega para a tela de cadastro
+                    },
+                    child: const Text('Não tem conta? Cadastre-se aqui'),
+
+                  ),
+>>>>>>> ac0eadb181070b4faf12b9ee2eefffd38ca9e105
                 ],
               ),
             ),
